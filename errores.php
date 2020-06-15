@@ -4,8 +4,8 @@
 error_reporting('E_ERROR');
 $nombre = 'Hola';
 
-echo nombre;
-echo nombres;
+echo $nombre;
+echo $nombres;
 
 ## E_NOTICE informa de variabl
 
