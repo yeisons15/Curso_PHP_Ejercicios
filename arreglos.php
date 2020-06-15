@@ -51,10 +51,54 @@ $dias = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes'];
 
 
 $usuario = array('nombre'=>'Yeison', 'edad'=>30, 'lenguaje'=>'PHP');
-var_dump($usuario);
+//var_dump($usuario);
 
 
 ## Ejemplo con la impresión de texto con un dato del arreglo
-echo "<br />"."Mi nombre es ".$usuario['nombre']."<br />";
+//echo "<br />"."Mi nombre es ".$usuario['nombre']."<br />";
+
+## Creación de arreglo multidimensional indexado
+
+## Forma 1
+/*$alumnos = array(
+        array('Juan', 20, 'Mexico'),
+        array('Yeison', 30, 'Colombía'),
+        array('Amanda', 39, 'Colombía')
+
+);*/
+
+## Forma 2
+
+$alumnos=[
+    ['Juan', 20, 'Mexico'],
+    ['Yeison', 30, 'Colombía'],
+    ['Amanda', 39, 'Colombía']
+];
+
+//var_dump($alumnos);
+
+## Impresión de un valor especifico.
+//echo $alumnos[1][0];
+
+
+## Creación de arreglo multidimensional asociativo
+
+$alumnosB = array(
+    array('nombre'=>'Yeison', 'edad'=>30, 'pais'=>'Colombia'),
+    array('nombre'=>'Alvaro', 'edad'=>40, 'pais'=>'Peru'),
+    array('nombre'=> 'Alexys', 'edad'=>38, 'pais'=>'Colombia')
+);
+
+var_dump($alumnosB)."<br />";
+
+## Imprimir valor en ubicación especifica
+
+echo "<br>".$alumnosB[2]['edad'];
+
+
+## Agregar una nueva llave o nombre a un arreglo
+$alumnosB[1]['Calificación']=9.5;
+
+var_dump($alumnosB)."<br>";
 
 ?>
