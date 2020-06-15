@@ -89,16 +89,43 @@ $alumnosB = array(
     array('nombre'=> 'Alexys', 'edad'=>38, 'pais'=>'Colombia')
 );
 
-var_dump($alumnosB)."<br />";
+//var_dump($alumnosB)."<br />";
 
 ## Imprimir valor en ubicación especifica
 
-echo "<br>".$alumnosB[2]['edad'];
+//echo "<br>".$alumnosB[2]['edad'];
 
 
 ## Agregar una nueva llave o nombre a un arreglo
 $alumnosB[1]['Calificación']=9.5;
 
-var_dump($alumnosB)."<br>";
+//var_dump($alumnosB)."<br>";
+
+## Arreglos y sus funciones nativas
+
+$cadena = '';
+$arreglo = [];
+$videojuevos = ['FIFA','Fortnite','Red Deal', 'Call Of Duty', 'Battelfield','Pokemon', 'GTA','The Sims'];
+
+# saber si un arraglo está vacío - empty
+var_dump(empty($arreglo));
+echo "<br>";
+var_dump(empty($videojuevos));
+echo "<br>";
+
+# Saber si un elemento en un arreglo existe
+var_dump(isset($videojuevos[50]));
+echo "<br>";
+var_dump(isset($videojuevos[5]));
+
+# Contar elementos de un arreglo
+echo count($videojuevos);
+
+# Antepenultimo elemento
+$posicion = count($videojuevos) - 2;
+echo $videojuevos[$posicion]." - ";
+
+
+
 
 ?>
