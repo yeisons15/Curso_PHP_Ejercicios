@@ -166,8 +166,6 @@ for($i=0;$i<=5;$i++){
     echo "El número acumulado es: ".$i."<br />";
 }
 
-*/
-
 ## Ejercicio 2 (Fibonacci)
 
 $imprimir =0;
@@ -186,3 +184,34 @@ for($i=0 ; $i < 10; $i++) {
 
 
 }
+
+
+
+
+## ForEach
+
+Foreach (As Valor){
+    bloque de código
+}
+
+
+
+## Ejemplo 1
+
+$redesSociales = ['Facebook', 'Instagram' , 'Twitter'];
+
+foreach ($redesSociales as $rS) {
+    echo $rS."<br />";
+}
+
+*/
+
+## Ejemplo 2
+$redesSociales = ['FB'=>'Facebook','IN'=>'Instagram' ,'TW'=> 'Twitter'];
+
+foreach ($redesSociales as $llave => $valor) {
+    echo $rS."<br />";
+}
+
+
+?>
