@@ -214,4 +214,16 @@ foreach ($redesSociales as $llave => $valor) {
 }
 
 
+## Funciones Anomimas
+function sumarNumeros ($a, $b, $imprime = false ){
+
+    $suma = $a + $b;
+
+    if ($imprime == true) {
+        echo "La suma es " . $suma . "<br />";
+    } else{
+        return $suma;
+    }
+}
+
 ?>
