@@ -213,7 +213,6 @@ foreach ($redesSociales as $llave => $valor) {
     echo $rS."<br />";
 }
 
-
 ## Funciones Anomimas
 function sumarNumeros ($a, $b, $imprime = false ){
 
