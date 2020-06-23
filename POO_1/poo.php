@@ -13,6 +13,15 @@ class Curso{
         return "El nombre del curso es <Strong>" . $this->nombre . " </Strong>y quien imparte el curso es: " . $this->profesor . "<br />";
     }
 
+
+    public function validaDisponiblidad (){
+        if ($this->disponible == true) {
+            return "El curso está disponible " . "<br />";
+        }else{
+            return "El curso no está disponible";
+        }
+    }
+
 }
 
 ## Creación de Objeto o instancia 1 
@@ -25,7 +34,8 @@ $php->profesor = 'Yesi Days';
 $php->disponible = true;
 
 
-echo $php->imprimirInfo();
+//echo $php->imprimirInfo();
+echo $php ->validaDisponiblidad();
 
 //var_dump($php);
 
@@ -36,9 +46,10 @@ $javascript->duracion = '6 sesiones';
 $javascript->costo = 0;
 $javascript->moneda = 'USD';
 $javascript->profesor = 'Álvaro Felipe';
-$javascript->disponible = true;
+$javascript->disponible = false;
 
-echo $javascript->imprimirInfo();
+echo $javascript ->validaDisponiblidad();
+//echo $javascript->imprimirInfo();
 //var_dump($javascript);
 
 
