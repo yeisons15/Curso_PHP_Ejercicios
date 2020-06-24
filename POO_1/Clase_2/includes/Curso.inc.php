@@ -1,6 +1,18 @@
 <?php
 
-class Curso{
+## Declaración de interfaces
+
+interface Requerimiento {
+    public function asignarRequerimiento($listado);
+    public function obtenerRequerimiento();
+}
+
+interface Conocimiento{
+    public function asignarConocimiento($listado);
+    public function obtenerConocimiento();
+}
+
+class Curso implements Requerimiento, Conocimiento{
 
     private $titulo;
     private $profesor;
