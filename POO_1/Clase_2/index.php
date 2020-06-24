@@ -17,6 +17,9 @@
     $curso2 = new Curso('JavaScript', 'Álvaro Felipe', '6 Sesiones', 12, true);
     $curso3 = new Curso('BD Desde Cero', 'Alexys Lozada', '5 Sesiones', 12, true);
 
+    echo $curso1 -> obtenerTitulo(). "<br />";
+    echo $curso2 -> obtenerTitulo(). "<br />";
+    echo $curso3 -> obtenerTitulo(). '<br />';
 ?>
 
 </body>

@@ -4,7 +4,7 @@ class Curso{
 
     private $titulo;
     private $profesor;
-    private $duracion:
+    private $duracion;
     private $costo;
     private $disponible;
 
@@ -21,7 +21,7 @@ class Curso{
     ## Encapsulación
     ## Se usan los métodos getter (objener) y setter (asignar datos)
     
-    $
+    ##Ejemplo Getter (Obtener)
     public function otenerTitulo(){
         return $this ->titulo;
     }
@@ -29,6 +29,12 @@ class Curso{
     public function obtenerProfesor(){
         return $this ->profesor;
     }
+
+    ##Ejemplo Setter (Asignar)
+    public function asignarTitulo($titulo){
+        $this->titulo = $titulo;
+    }
+
 
     
 }
