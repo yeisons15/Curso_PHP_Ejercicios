@@ -19,6 +19,9 @@ class Curso implements Requerimiento, Conocimiento{
     private $duracion;
     private $costo;
     private $disponible;
+    private $listado;
+    
+    
 
     ## Creación del constructor
     public function __construct ($titulo, $profesor, $duracion, $costo, $disponible){
@@ -34,12 +37,12 @@ class Curso implements Requerimiento, Conocimiento{
     ## Se usan los métodos getter (objener) y setter (asignar datos)
     
     ##Ejemplo Getter (Obtener)
-    public function otenerTitulo(){
-        return $this ->titulo;
+    public function obtenerTitulo(){
+        return $this->titulo;
     }
 
     public function obtenerProfesor(){
-        return $this ->profesor;
+        return $this->profesor;
     }
 
     ##Ejemplo Setter (Asignar)
@@ -47,6 +50,30 @@ class Curso implements Requerimiento, Conocimiento{
         $this->titulo = $titulo;
     }
 
+    ## Implementación las funciones de las interfaces.
+    public function asignarRequerimiento($listado){
+        $this->listado = $listado;
+    }
+
+    public function obtenerRequerimiento(){
+        if (!empty($this->listado)) {
+            foreach ($this->listado as $lista) {
+                echo "<p>" . $lista . "</p>";
+            }
+        }
+    }
+
+    public function asignarConocimiento($listado){
+        $this->listado = $listado;
+    }
+
+    public function obtenerConocimiento(){
+        if (!empty($this->listado)) {
+            foreach($this->listado as $lista){
+                echo "<p>" . $lista . "</p>";
+            }
+        }
+    }
 
     
 }
