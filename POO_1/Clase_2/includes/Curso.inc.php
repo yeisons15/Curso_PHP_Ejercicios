@@ -20,6 +20,9 @@ class Curso implements Requerimiento, Conocimiento{
     private $costo;
     private $disponible;
     private $listado;
+
+    ## Atributo estatico
+    public static $moneda;
     
     
 
@@ -32,6 +35,15 @@ class Curso implements Requerimiento, Conocimiento{
         $this->disponible = $disponible;
 
     }
+
+    ## Destructor
+
+    ## Es util para liberar espacio en memoria luego de correr la aplicación
+    public function __destruct(){
+        echo "Destruyendo " . $this->titulo."<br />";
+    }
+
+
 
     ## Encapsulación
     ## Se usan los métodos getter (objener) y setter (asignar datos)
@@ -73,6 +85,10 @@ class Curso implements Requerimiento, Conocimiento{
                 echo "<p>" . $lista . "</p>";
             }
         }
+    }
+
+    public static obtenerDenominacion (){
+        return self::$moneda;
     }
 
     
