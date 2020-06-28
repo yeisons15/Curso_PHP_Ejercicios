@@ -11,7 +11,14 @@
 <?php
     
     ## Incluir a mi archivo global
+    
     require_once __DIR__.'/includes/Global.inc.php';
+
+    ## Instanciar clase estudiante
+    $estudiante = new Estudiante ('Yeison', 'Rojas', "Correo");
+    var_dump($estudiante);
+    
+    
     /*
     define ('INC', '/includes/');
     require_once __DIR__.INC.'Curso.inc.php';
