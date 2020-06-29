@@ -20,10 +20,23 @@ class Persona {
 
 
     public function __construct($nombre, $apellido, $email){
-        $this->nombre=$nombre;
+        //$this->nombre=$nombre;
         $this->apellido=$apellido;
         $this->email=$email;
     }
+
+
+    /*try {
+        if (empty($this->nombre)) {
+            throw new Exception('Debes ingresar el nombre');
+        }else {
+            $this->nombre=$nombre;
+        }
+    } catch (Exeptioin $e) {
+        echo $e->getMessage();
+    }
+
+*/
 
     public function bienvenida (){
         return "Bienvenido {$this->nombre} a EdTeam";

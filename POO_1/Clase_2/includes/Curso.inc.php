@@ -22,7 +22,7 @@ class Curso implements Requerimiento, Conocimiento{
     private $listado;
 
     ## Atributo estatico
-    public static $moneda;
+    public static $moneda; 
     
     
 
