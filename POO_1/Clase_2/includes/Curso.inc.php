@@ -87,10 +87,11 @@ class Curso implements Requerimiento, Conocimiento{
         }
     }
 
-    public static obtenerDenominacion (){
+    static function obtenerDenominacion (){
         return self::$moneda;
     }
 
+    
     
 }
 

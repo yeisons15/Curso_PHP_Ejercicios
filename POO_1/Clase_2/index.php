@@ -12,7 +12,7 @@
     
     ## Incluir a mi archivo global
     
-    require_once __DIR__.'/includes/Global.inc.php';
+    require_once __DIR__. '/includes/Global.inc.php';
 
     ## Instanciar clase estudiante
     $estudiante = new Estudiante ('Yeison', 'Rojas', "Correo");
