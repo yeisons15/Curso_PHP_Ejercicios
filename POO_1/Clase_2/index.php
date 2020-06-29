@@ -14,10 +14,17 @@
     
     require_once __DIR__. '/includes/Global.inc.php';
 
-    ## Instanciar clase estudiante
+    ## Instanciar clase Estudiante
     $estudiante = new Estudiante ('Yeison', 'Rojas', "Correo");
-    var_dump($estudiante);
+    //var_dump($estudiante);
     
+    echo "<p>".$estudiante -> bienvenida()."</p>";
+
+    ## Instaciar clase Profesor
+    $profesor = new Profesor ('Nombre_Profesor','Apellido Profesor', 'correo@correo');
+    //var_dump($profesor);
+
+    echo "<p>".$profesor -> bienvenida()."</p>";
     
     /*
     define ('INC', '/includes/');
