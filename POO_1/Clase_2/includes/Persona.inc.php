@@ -1,10 +1,23 @@
 <?php
 
+trait Compra{
+    private $compra;
+    function validarCompra(){
+        return "Compra exitosa";
+    }
+}
+
 class Persona {
+
+    use Compra; #Se agregan más trait separandolos por comas
+
+    const MONEDA = 'USD';
 
     public $nombre;
     public $apellido;
     public $email;
+
+
 
     public function __construct($nombre, $apellido, $email){
         $this->nombre=$nombre;
@@ -16,7 +29,9 @@ class Persona {
         return "Bienvenido {$this->nombre} a EdTeam";
     }
 
-    public function despedida (){
+
+    ## Con la palabra reservada "final" no se puede sobre escribir el método
+    final public function despedida (){
         return "Hasta Pronto {$this->nombre}";
     }
 }

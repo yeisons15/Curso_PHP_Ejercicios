@@ -19,13 +19,17 @@
     //var_dump($estudiante);
     
     echo "<p>".$estudiante -> bienvenida()."</p>";
+    echo "<p>".$estudiante -> despedida()."</p>";
+    echo "<p>".$estudiante -> validarCompra()."</p>";
+    echo $estudiante::MONEDA;
 
     ## Instaciar clase Profesor
     $profesor = new Profesor ('Nombre_Profesor','Apellido Profesor', 'correo@correo');
     //var_dump($profesor);
 
     echo "<p>".$profesor -> bienvenida()."</p>";
-    
+    echo "<p>".$profesor -> despedida()."</p>";
+    echo $profesor::MONEDA;
     /*
     define ('INC', '/includes/');
     require_once __DIR__.INC.'Curso.inc.php';
