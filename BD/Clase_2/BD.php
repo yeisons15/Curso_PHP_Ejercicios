@@ -7,7 +7,7 @@
 		private static $db_usuario = 'root';
 		private static $db_pass = '';
 		private static $db_servidor = DB_SERVIDOR;
-		private static $db_nombre = 'curso_php';
+		private static $db_nombre = 'prueba';
 		private static $db_charset = DB_CHARSET;
 		private $conexion; #Conectar con la BD
 

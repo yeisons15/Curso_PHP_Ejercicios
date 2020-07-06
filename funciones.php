@@ -10,7 +10,7 @@
  }   
 
 $numero1 = 30;
-$sumarNumeros($numero1;10;true);
+$//sumarNumeros($numero1;10;true);
 
 ## Funcion Anonima
 

@@ -11,6 +11,9 @@
 	<a href="#">Profesores</a>
 	<a href="#">Cursos</a>
 
+<?php
+phpinfo();
+?>
 
 </body>
 </html>

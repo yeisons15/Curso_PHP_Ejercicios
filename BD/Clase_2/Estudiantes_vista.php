@@ -1,6 +1,7 @@
 <?php
 	require_once 'Estudiantes_modelo.php';
 	$estudiante = new Estudiantes_modelo();
+	
 ?>
 
 <!DOCTYPE html>
@@ -17,49 +18,58 @@
 	<h3>C: Insertar</h3>
 	<?php
 
-		/*$alumno = [
-			'nombre'  => 'Roberto',
-			'paterno' => 'Hodgson',
-			'materno' => 'C',
+		/* $alumno = [
+			'nombre'  => 'Gaby',
+			'paterno' => 'R.A',
+			'materno' => 'M',
 			'email'   => 'rb@gmail.com'
-		];*/
-
+		]; 
+		
 		$respuesta = $estudiante->insertar($alumno);
 		if ($respuesta == true) {
-			echo "Se ha insertado";
+			//echo "Se ha insertado, esto en vista".'<br />';
+			//var_dump($alumno).'<br />';
+			
 		} else {
 			echo "Hay un error";
-		}
+		}*/
 
 	?>
 
 	<h3>R: Leer/Consultar</h3>
 	<?php
-		/*$resultados = $estudiante->consultar();
+		/* $resultados = $estudiante->consultar();
 		foreach ($resultados as $estudiante) {
 			echo $estudiante['nombre']." ".$estudiante['paterno']."<br />";
-		}*/
+		} */
 	?>
 
 	<h3>U: Actualizar</h3>
 
 	<?php
 
-		/*$alumno = [
-			'nombre' => 'Yesi',
-			'paterno' => 'Days.',
-			'materno' => 'B.',
-			'email' => 'silvercorp@gmail.com'
+		/* $alumno = [
+			'id' => 17,
+			'nombre' => 'Jose',
+			'paterno' => 'E',
+			'materno' => 'A',
+			'email' => 'JEA@gmail.com'
 		];
-		$estudiante->actualizar($alumno);*/
-
+		var_dump ($alumno) . "Datos de Vista <br/>";
+		$estudiante->actualizar($alumno);
+		
+		$resultados = $estudiante->consultar();
+		foreach ($resultados as $estudiante) {
+			echo $estudiante['nombre']." ".$estudiante['paterno']."<br />";
+		}
+ */
 	?>
 
 	<h3>D: Eliminar</h3>
 
 	<?php
 
-		$alumno = ['email' => 'silvercorp@gmail.com'];
+		$alumno = ['email' => 'dog@gmail.com'];
 		$estudiante->eliminar('todos', $alumno);
 
 	?>
