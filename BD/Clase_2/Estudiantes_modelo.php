@@ -33,11 +33,26 @@
 			}
 		}
 
-		public function consultar() {
+		public function consultar($campos = null, $where = null) {
+			
 			$conexion = parent::conectar();
 			try {
-				#SELECT * FROM nombre_tabla;
-				$query = "SELECT * FROM usuarios";
+				$cadena = '';
+				if (!empty($campos)) {
+					foreach($campos as $campo){
+						$cadena .= $campo . ',';
+					}
+				$cadena =substr($cadena, 0, -1);	//Esto elimina el último elemento
+				}else{
+					$cadena = '*';
+				}
+
+				if ($where as $llave => $valor) {
+					if ($valor1='') {
+						$condiciones[]=$llave . ' ' . $valor;
+					}
+				}
+				#$query = "SELECT * FROM usuarios";
 				#return $consulta = $conexion->query($query)->fetch();
 				return $consulta = $conexion->query($query)->fetchAll();
 			} catch (Exception $e) {

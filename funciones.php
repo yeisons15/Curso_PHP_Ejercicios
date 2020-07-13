@@ -36,8 +36,8 @@ $laravel = function($nombre){
     return "<p> ". $nombre . "Finaliza el curso";
 }
 
-echo finalizaCurso($php, 'Juan');
-echo finalizaCurso($laravel, 'Juan');
+//echo finalizaCurso($php, 'Juan');
+//echo finalizaCurso($laravel, 'Juan');
 
 
 
