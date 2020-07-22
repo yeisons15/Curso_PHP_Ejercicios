@@ -47,14 +47,21 @@
 					$cadena = '*';
 				}
 
-				if ($where as $llave => $valor) {
-					if ($valor1='') {
-						$condiciones[]=$llave . ' ' . $valor;
+				if ($where != null) {
+					foreach ($where as $llave => $valor) {
+						if ($valor != '') {
+							$condiciones[]=$llave . '' . $valor;
+						}
 					}
+
+					$query = "SELECT " . $cadena . " FROM estudiantes WHERE " . implode(' AND', $condiciones );
+				}else{
+					$query = "SELECT " . $cadena . " FROM estudiantes";
 				}
-				#$query = "SELECT * FROM usuarios";
-				#return $consulta = $conexion->query($query)->fetch();
-				return $consulta = $conexion->query($query)->fetchAll();
+				
+				$consulta = $conexion->query($query)->fetchAll();
+				return $consulta;
+
 			} catch (Exception $e) {
 				exit("ERROR: ".$e->getMessage());
 			}
